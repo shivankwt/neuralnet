@@ -18,10 +18,10 @@ local function derivative(x)
 	return x * (1 - x)
 end
 
-local function shuffle(t)
-	for i = #t, 2, -1 do 
+local function shuffle(table)
+	for i = #table, 2, -1 do 
 		local j = math.random(1, i)
-		t[i], t[j] = t[j], t[i]
+		table[i], table[j] = table[j], table[i]
 	end
 end
 
@@ -52,7 +52,7 @@ local function initModel()
 			{ 1.0 },
 			{ 1.0 },
 			{ 0.0 }
-		},
+		}
 	}
 
 	for i = 1, hiddenNodes do
@@ -166,7 +166,7 @@ local function displayResult()
 		end
 
 		print(string.format(
-			"input: %f %f | target: %f | predicted: %f",
+			"input values: %f %f || target: %f || prediction: %f",
 			model.trainingInputs[i][1],
 			model.trainingInputs[i][2],
 			model.trainingOutputs[i][1],
@@ -176,3 +176,4 @@ local function displayResult()
 end
 
 displayResult()
+
