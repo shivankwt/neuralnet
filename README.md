@@ -18,6 +18,7 @@ This neural network uses XOR training data to learn the relationship between the
 weights and biases through backpropagation until it can accurately predict the xor result for all possible input pairs.
 
 * XOR Training Data
+
 | Input A | Input B | Output |
 |---------|---------|--------|
 | 0       | 0       | 0      |
